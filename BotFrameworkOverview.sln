@@ -1,10 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotFrameworkOverview.Basic", "BotFrameworkOverview.Basic\BotFrameworkOverview.Basic.csproj", "{DA3DCCD6-0BE7-4349-8880-75F7FA99B30C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotFrameworkOverview.Dialogs", "BotFrameworkOverview.Dialogs\BotFrameworkOverview.Dialogs.csproj", "{24FB8C32-8B62-4927-A151-C1E73DA8084F}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA3DCCD6-0BE7-4349-8880-75F7FA99B30C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA3DCCD6-0BE7-4349-8880-75F7FA99B30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA3DCCD6-0BE7-4349-8880-75F7FA99B30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA3DCCD6-0BE7-4349-8880-75F7FA99B30C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24FB8C32-8B62-4927-A151-C1E73DA8084F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24FB8C32-8B62-4927-A151-C1E73DA8084F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24FB8C32-8B62-4927-A151-C1E73DA8084F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24FB8C32-8B62-4927-A151-C1E73DA8084F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25118B5A-B14A-4D99-9138-6A9B89AF024F}
 	EndGlobalSection
 EndGlobal
