@@ -16,16 +16,9 @@ namespace BotFrameworkOverview.Dialogs.Dialogs
             return Task.CompletedTask;
         }
 
-        //private Task FirstQuestion(IDialogContext context, IAwaitable<object> result)
-        //{
-        //    PromptDialog.Number(context, SecondQuestion, "Enter the first number:");
-        //    return Task.CompletedTask;
-        //}
-
         private async Task SecondQuestion(IDialogContext context, IAwaitable<double> result)
         {
-            var answer = await result;
-            _number1 = answer;
+            _number1 = await result;
             PromptDialog.Number(context, AddNumbers, "Then the second number:", "That is an invalid number");
         }
 

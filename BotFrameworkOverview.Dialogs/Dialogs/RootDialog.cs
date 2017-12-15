@@ -32,7 +32,7 @@ namespace BotFrameworkOverview.Dialogs.Dialogs
                 case "add":
                     context.Call(new AdditionDialog(), EndMessageAsync);
                     break;
-                case "subtraction":
+                case "subtract":
                     context.Call(new SubtractionDialog(), EndMessageAsync);
                     break;
                 case "multiplication":
