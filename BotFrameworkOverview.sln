@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotFrameworkOverview.FormFl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotFrameworkOverview.Cards", "BotFrameworkOverview.Cards\BotFrameworkOverview.Cards.csproj", "{23F622C6-0B60-45F7-9C31-B79EE05B1228}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotFrameworkOverview.Luis", "BotFrameworkOverview.Luis\BotFrameworkOverview.Luis.csproj", "{0C434F59-C7BC-4A1A-B46B-8106178E272D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{23F622C6-0B60-45F7-9C31-B79EE05B1228}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23F622C6-0B60-45F7-9C31-B79EE05B1228}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23F622C6-0B60-45F7-9C31-B79EE05B1228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C434F59-C7BC-4A1A-B46B-8106178E272D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C434F59-C7BC-4A1A-B46B-8106178E272D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C434F59-C7BC-4A1A-B46B-8106178E272D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C434F59-C7BC-4A1A-B46B-8106178E272D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
