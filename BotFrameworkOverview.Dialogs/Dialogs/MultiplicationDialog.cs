@@ -3,10 +3,10 @@ using System.Threading.Tasks;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
 
-namespace BotFrameworkOverview.Basic.Dialogs
+namespace BotFrameworkOverview.Dialogs.Dialogs
 {
     [Serializable]
-    public class RootDialog : IDialog<object>
+    public class MultiplicationDialog : IDialog<object>
     {
         public Task StartAsync(IDialogContext context)
         {
@@ -17,12 +17,9 @@ namespace BotFrameworkOverview.Basic.Dialogs
 
         private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
         {
-            var activity = await result as Activity;
+            var activity = await result as IMessageActivity;
 
-            // calculate something for us to return
-            int length = (activity.Text ?? string.Empty).Length;
-            // return our reply to the user
-            await context.PostAsync($"You sent {activity.Text} which was {length} characters");
+            // TODO: Put logic for handling user message here
 
             context.Wait(MessageReceivedAsync);
         }

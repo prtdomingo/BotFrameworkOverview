@@ -8,24 +8,43 @@ namespace BotFrameworkOverview.Dialogs.Dialogs
     [Serializable]
     public class RootDialog : IDialog<object>
     {
+        private string[] _mathOperations = new string[] { "Add", "Subtract", "Multiplication" };
+
         public Task StartAsync(IDialogContext context)
         {
-            context.Wait(MessageReceivedAsync);
+            context.Wait(PromptUserToSelectOperation);
 
             return Task.CompletedTask;
         }
 
-        private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
+        private async Task PromptUserToSelectOperation(IDialogContext context, IAwaitable<object> result)
         {
-            var activity = await result as Activity;
+            var message = await result;
 
-            // calculate something for us to return
-            int length = (activity.Text ?? string.Empty).Length;
+            PromptDialog.Choice(context, SelectMathOperation, _mathOperations, "Please select a Math operation", "That's an invalid operation, please select the valid operation");
+        }
 
-            // return our reply to the user
-            await context.PostAsync($"You sent {activity.Text} which was {length} characters");
+        private async Task SelectMathOperation(IDialogContext context, IAwaitable<string> result)
+        {
+            var message = await result;
+            switch(message.ToLower().Trim())
+            {
+                case "add":
+                    context.Call(new AdditionDialog(), EndMessageAsync);
+                    break;
+                case "subtraction":
+                    context.Call(new SubtractionDialog(), EndMessageAsync);
+                    break;
+                case "multiplication":
+                    context.Call(new MultiplicationDialog(), EndMessageAsync);
+                    break;
+            }
+        }
 
-            context.Wait(MessageReceivedAsync);
+        private Task EndMessageAsync(IDialogContext context, IAwaitable<object> result)
+        {
+            context.Wait(PromptUserToSelectOperation);
+            return Task.CompletedTask;
         }
     }
 }

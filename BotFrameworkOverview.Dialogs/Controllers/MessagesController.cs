@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -22,13 +23,13 @@ namespace BotFrameworkOverview.Dialogs
             }
             else
             {
-                HandleSystemMessage(activity);
+                await HandleSystemMessage(activity);
             }
             var response = Request.CreateResponse(HttpStatusCode.OK);
             return response;
         }
 
-        private Activity HandleSystemMessage(Activity message)
+        private async Task<Activity> HandleSystemMessage(Activity message)
         {
             if (message.Type == ActivityTypes.DeleteUserData)
             {
@@ -40,6 +41,20 @@ namespace BotFrameworkOverview.Dialogs
                 // Handle conversation state changes, like members being added and removed
                 // Use Activity.MembersAdded and Activity.MembersRemoved and Activity.Action for info
                 // Not available in all channels
+                //if (message is IConversationUpdateActivity iConversationUpdated)
+                //{
+                //    ConnectorClient connector = new ConnectorClient(new Uri(message.ServiceUrl));
+
+                //    foreach (var member in iConversationUpdated.MembersAdded ?? Array.Empty<ChannelAccount>())
+                //    {
+                //        // if the bot is added, then 
+                //        if (member.Id == iConversationUpdated.Recipient.Id)
+                //        {
+                //            var reply = ((Activity)iConversationUpdated).CreateReply("Hi, I'm Math bot! I can help you solve your simple math problems!");
+                //            await connector.Conversations.ReplyToActivityAsync(reply);
+                //        }
+                //    }
+                //}
             }
             else if (message.Type == ActivityTypes.ContactRelationUpdate)
             {
