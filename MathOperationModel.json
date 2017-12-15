@@ -1,0 +1,272 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "MathOperationModel",
+  "desc": "Demo",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "None"
+    },
+    {
+      "name": "Operation.Addition"
+    },
+    {
+      "name": "Operation.Division"
+    },
+    {
+      "name": "Operation.Multiplication"
+    },
+    {
+      "name": "Operation.Subtraction"
+    }
+  ],
+  "entities": [
+    {
+      "name": "MathOperation"
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [
+    "number"
+  ],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "turn off the lights",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i want ice cream",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "1 + 1",
+      "intent": "Operation.Addition",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "7 / 2",
+      "intent": "Operation.Division",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "3+4",
+      "intent": "Operation.Addition",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "1*2",
+      "intent": "Operation.Multiplication",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "christmas tree",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i love food",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what is one plus two",
+      "intent": "Operation.Addition",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 12,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "pizza is life",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what is 5 +5",
+      "intent": "Operation.Addition",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 10,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "seven plus six",
+      "intent": "Operation.Addition",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 6,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "what is two minus 3",
+      "intent": "Operation.Subtraction",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 12,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "what is 4 - 3",
+      "intent": "Operation.Subtraction",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 10,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "2-0",
+      "intent": "Operation.Subtraction",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "please answer 7 minus 6",
+      "intent": "Operation.Subtraction",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 16,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "8-2",
+      "intent": "Operation.Subtraction",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "what is ten times 3",
+      "intent": "Operation.Multiplication",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 12,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "3 * 2",
+      "intent": "Operation.Multiplication",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "what is the product of five times 6",
+      "intent": "Operation.Multiplication",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 28,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "6 times seven",
+      "intent": "Operation.Multiplication",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 2,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "6 divided by 1",
+      "intent": "Operation.Division",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 2,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "what is 5 divided by 1",
+      "intent": "Operation.Division",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 10,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "what is the quotient of 1/1",
+      "intent": "Operation.Division",
+      "entities": [
+        {
+          "entity": "MathOperation",
+          "startPos": 25,
+          "endPos": 25
+        }
+      ]
+    }
+  ]
+}
