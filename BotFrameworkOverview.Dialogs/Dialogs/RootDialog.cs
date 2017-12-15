@@ -13,15 +13,13 @@ namespace BotFrameworkOverview.Dialogs.Dialogs
         public Task StartAsync(IDialogContext context)
         {
             context.Wait(PromptUserToSelectOperation);
-
             return Task.CompletedTask;
         }
 
-        private async Task PromptUserToSelectOperation(IDialogContext context, IAwaitable<object> result)
+        private Task PromptUserToSelectOperation(IDialogContext context, IAwaitable<object> result)
         {
-            var message = await result;
-
             PromptDialog.Choice(context, SelectMathOperation, _mathOperations, "Please select a Math operation", "That's an invalid operation, please select the valid operation");
+            return Task.CompletedTask;
         }
 
         private async Task SelectMathOperation(IDialogContext context, IAwaitable<string> result)

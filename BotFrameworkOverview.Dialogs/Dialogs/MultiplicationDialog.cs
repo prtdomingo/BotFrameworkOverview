@@ -8,20 +8,26 @@ namespace BotFrameworkOverview.Dialogs.Dialogs
     [Serializable]
     public class MultiplicationDialog : IDialog<object>
     {
+        private double _number1 { get; set; }
+
         public Task StartAsync(IDialogContext context)
         {
-            context.Wait(MessageReceivedAsync);
-
+            PromptDialog.Number(context, SecondQuestion, "Enter the first number:", "Please include a valid number");
             return Task.CompletedTask;
         }
 
-        private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
+        private async Task SecondQuestion(IDialogContext context, IAwaitable<double> result)
         {
-            var activity = await result as IMessageActivity;
+            _number1 = await result;
+            PromptDialog.Number(context, GetProduct, "Enter the second number:", "Please include a valid number");
+        }
 
-            // TODO: Put logic for handling user message here
+        private async Task GetProduct(IDialogContext context, IAwaitable<double> result)
+        {
+            var answer = await result;
+            await context.PostAsync($"{_number1} times {answer} is {_number1 * answer}");
 
-            context.Wait(MessageReceivedAsync);
+            context.Done<object>(null);
         }
     }
 }
