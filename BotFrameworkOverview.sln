@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotFrameworkOverview.Basic"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotFrameworkOverview.Dialogs", "BotFrameworkOverview.Dialogs\BotFrameworkOverview.Dialogs.csproj", "{24FB8C32-8B62-4927-A151-C1E73DA8084F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BotFrameworkOverview.FormFlows", "BotFrameworkOverview.FormFlows\BotFrameworkOverview.FormFlows.csproj", "{B42BD540-8AD2-40CC-B11B-C0470F03EA40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{24FB8C32-8B62-4927-A151-C1E73DA8084F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24FB8C32-8B62-4927-A151-C1E73DA8084F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24FB8C32-8B62-4927-A151-C1E73DA8084F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B42BD540-8AD2-40CC-B11B-C0470F03EA40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B42BD540-8AD2-40CC-B11B-C0470F03EA40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B42BD540-8AD2-40CC-B11B-C0470F03EA40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B42BD540-8AD2-40CC-B11B-C0470F03EA40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
