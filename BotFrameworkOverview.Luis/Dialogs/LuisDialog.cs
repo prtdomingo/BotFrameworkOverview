@@ -8,7 +8,8 @@ using System.Linq;
 
 namespace BotFrameworkOverview.Luis.Dialogs
 {
-    [LuisModel("daea4935-5119-4f1f-b73a-53dcd7ca241c", "42c38a98887f472d9b52982ee8d0177b")]
+    // NOTE: You can import the MathOperationModel.json to Luis.ai to make this properly work
+    [LuisModel("YOUR_LUIS_MODEL_ID", "YOUR_LUIS_SUBSCRIPTION_KEY")]
     [Serializable]
     public class LuisDialog : LuisDialog<object>
     {

@@ -11,8 +11,8 @@ namespace BotFrameworkOverview.ComputerVision.Dialogs
     [Serializable]
     public class RootDialog : IDialog<object>
     {
-        // URL: https://www.customvision.ai/
-        private const string _customVisionUrl = "https://southcentralus.api.cognitive.microsoft.com/customvision/v1.0/Prediction/62b6f4f3-1855-43ec-978c-8a5ee8a9eaa6/url";
+        // Note: You can go to https://www.customvision.ai to create your own custom vision cognitive service
+        private const string _customVisionUrl = "YOUR_CUSTOM_VISION_URL";
         public Task StartAsync(IDialogContext context)
         {
             context.Wait(MessageReceivedAsync);
@@ -26,7 +26,7 @@ namespace BotFrameworkOverview.ComputerVision.Dialogs
 
             using (HttpClient client = new HttpClient())
             {
-                client.DefaultRequestHeaders.Add("Prediction-Key", "687677d8866a493a8a97f5268d29d60a");
+                client.DefaultRequestHeaders.Add("Prediction-Key", "YOUR_PREDICTION_KEY");
 
                 var body = new CustomVisionBody { Url = activity.Text };
                 var response = await client.PostAsJsonAsync(_customVisionUrl, body);
